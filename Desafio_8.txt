@@ -1,0 +1,213 @@
+*Utilizando Mongo Shell, crear una base de datos llamada ecommerce que contenga dos colecciones: mensajes y productos
+C:\Users\inta>mongosh
+Current Mongosh Log ID: 6332e764f594cc6903533fc6
+Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.0
+Using MongoDB:          6.0.1
+Using Mongosh:          1.6.0
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+------
+   The server generated these startup warnings when booting
+   2022-09-26T17:13:17.918-03:00: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+------
+
+------
+   Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+   metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+   The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+   and anyone you share the URL with. MongoDB may use this information to make product
+   improvements and to suggest MongoDB products and deployment options to you.
+
+   To enable free monitoring, run the following command: db.enableFreeMonitoring()
+   To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+------
+
+test> use eccomerce
+switched to db eccomerce
+eccomerce> db.productos.insertMany([
+...   {
+...     "nombre": "Champú",
+...     "precio": "123",
+...     "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
+...     "descripcion": "Un nuevo producto",
+...     "codigo": "1234",
+...     "stock": "12",
+...     "id": 1,
+...     "timeStamp": 1662671018831
+...   },
+...   {
+...     "nombre": "Jabón",
+...     "precio": "23",
+...     "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
+...     "descripcion": "Un nuevo producto 2",
+...     "codigo": "456",
+...     "stock": "12",
+...     "id": 2,
+...     "timeStamp": 1662671155583
+...   },
+...   {
+...     "nombre": "Acondicionador",
+...     "precio": "345",
+...     "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
+...     "descripcion": "Un nuevo producto 6",
+...     "codigo": "67867867",
+...     "stock": "14",
+...     "id": 4,
+...     "timeStamp": 1662671214780
+...   },
+...   {
+...     "nombre": "Champú",
+...     "precio": "123",
+...     "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
+...     "descripcion": "Un nuevo producto",
+...     "codigo": "1234",
+...     "stock": "12",
+...     "id": 1,
+...     "timeStamp": 1662671018831
+...   },
+...   {
+...     "nombre": "Jabón",
+...     "precio": "23",
+...     "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
+...     "descripcion": "Un nuevo producto 2",
+...     "codigo": "456",
+...     "stock": "12",
+...     "id": 2,
+...     "timeStamp": 1662671155583
+...   },
+...   {
+...     "nombre": "Acondicionador",
+...     "precio": "345",
+...     "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
+...     "descripcion": "Un nuevo producto 6",
+...     "codigo": "67867867",
+...     "stock": "14",
+...     "id": 4,
+...     "timeStamp": 1662671214780
+...   },
+...   {
+...     "nombre": "Champú",
+...     "precio": "123",
+...     "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
+...     "descripcion": "Un nuevo producto",
+...     "codigo": "1234",
+...     "stock": "12",
+...     "id": 1,
+...     "timeStamp": 1662671018831
+...   },
+...   {
+...     "nombre": "Jabón",
+...     "precio": "23",
+...     "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
+...     "descripcion": "Un nuevo producto 2",
+...     "codigo": "456",
+...     "stock": "12",
+...     "id": 2,
+...     "timeStamp": 1662671155583
+...   },
+...   {
+...     "nombre": "Acondicionador",
+...     "precio": "345",
+...     "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
+...     "descripcion": "Un nuevo producto 6",
+...     "codigo": "67867867",
+...     "stock": "14",
+...     "id": 4,
+...     "timeStamp": 1662671214780
+...   },
+... {
+...     "nombre": "Champú",
+...     "precio": "123",
+...     "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
+...     "descripcion": "Un nuevo producto",
+...     "codigo": "1234",
+...     "stock": "12",
+...     "id": 1,
+...     "timeStamp": 1662671018831
+...   }
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("63338b7732f6d58924650858"),
+    '1': ObjectId("63338b7732f6d58924650859"),
+    '2': ObjectId("63338b7732f6d5892465085a"),
+    '3': ObjectId("63338b7732f6d5892465085b"),
+    '4': ObjectId("63338b7732f6d5892465085c"),
+    '5': ObjectId("63338b7732f6d5892465085d"),
+    '6': ObjectId("63338b7732f6d5892465085e"),
+    '7': ObjectId("63338b7732f6d5892465085f"),
+    '8': ObjectId("63338b7732f6d58924650860"),
+    '9': ObjectId("63338b7732f6d58924650861")
+  }
+}
+eccomerce> db.mensajes.insertMany([
+...   {
+...     "email": "marcos_arguello2003@yahoo.com.ar",
+...     "fecha": "1/9/2022 19:6:38",
+...     "mensaje": "Hola1"
+...   },
+...   {
+...     "email": "marcos_arguello2003@yahoo.com.ar",
+...     "fecha": "1/9/2022 19:6:50",
+...     "mensaje": "Hola2"
+...   },
+...  {
+...     "email": "marcos_arguello2003@yahoo.com.ar",
+...     "fecha": "1/9/2022 19:6:38",
+...     "mensaje": "Hola3"
+...   },
+...   {
+...     "email": "marcos_arguello2003@yahoo.com.ar",
+...     "fecha": "1/9/2022 19:6:50",
+...     "mensaje": "Hola4"
+...   },
+...  {
+...     "email": "marcos_arguello2003@yahoo.com.ar",
+...     "fecha": "1/9/2022 19:6:38",
+...     "mensaje": "Hola5"
+...   },
+...   {
+...     "email": "marcos_arguello2003@yahoo.com.ar",
+...     "fecha": "1/9/2022 19:6:50",
+...     "mensaje": "Hola6"
+...   },
+...  {
+...     "email": "marcos_arguello2003@yahoo.com.ar",
+...     "fecha": "1/9/2022 19:6:38",
+...     "mensaje": "Hola7"
+...   },
+...   {
+...     "email": "marcos_arguello2003@yahoo.com.ar",
+...     "fecha": "1/9/2022 19:6:50",
+...     "mensaje": "Hola8"
+...   },
+...  {
+...     "email": "marcos_arguello2003@yahoo.com.ar",
+...     "fecha": "1/9/2022 19:6:38",
+...     "mensaje": "Hola9"
+...   },
+...   {
+...     "email": "marcos_arguello2003@yahoo.com.ar",
+...     "fecha": "1/9/2022 19:6:50",
+...     "mensaje": "Hola10"
+...   }
+... ])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("63338ccb32f6d58924650862"),
+    '1': ObjectId("63338ccb32f6d58924650863"),
+    '2': ObjectId("63338ccb32f6d58924650864"),
+    '3': ObjectId("63338ccb32f6d58924650865"),
+    '4': ObjectId("63338ccb32f6d58924650866"),
+    '5': ObjectId("63338ccb32f6d58924650867"),
+    '6': ObjectId("63338ccb32f6d58924650868"),
+    '7': ObjectId("63338ccb32f6d58924650869"),
+    '8': ObjectId("63338ccb32f6d5892465086a"),
+    '9': ObjectId("63338ccb32f6d5892465086b")
+  }
+}
+eccomerce>
