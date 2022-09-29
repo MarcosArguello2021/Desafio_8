@@ -26,123 +26,129 @@ For mongosh info see: https://docs.mongodb.com/mongodb-shell/
 
 test> use eccomerce
 switched to db eccomerce
+
+//*1) Agregar 10 documentos con valores distintos a las colecciones mensajes y productos. El formato de los documentos debe estar en correspondencia con el que venimos utilizando en el entregable con base de datos MariaDB.
+//*2) Definir las claves de los documentos en relación a los campos de las tablas de esa base. En el caso de los productos, poner valores al campo precio entre los 100 y 5000 pesos(eligiendo valores intermedios, ej: 120, 580, 900, 1280, 1700, 2300, 2860, 3350, 4320, 4990).
+
 eccomerce> db.productos.insertMany([
-...   {
-...     "nombre": "Champú",
-...     "precio": "123",
-...     "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
-...     "descripcion": "Un nuevo producto",
-...     "codigo": "1234",
-...     "stock": "12",
-...     "id": 1,
-...     "timeStamp": 1662671018831
-...   },
-...   {
-...     "nombre": "Jabón",
-...     "precio": "23",
-...     "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
-...     "descripcion": "Un nuevo producto 2",
-...     "codigo": "456",
-...     "stock": "12",
-...     "id": 2,
-...     "timeStamp": 1662671155583
-...   },
-...   {
-...     "nombre": "Acondicionador",
-...     "precio": "345",
-...     "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
-...     "descripcion": "Un nuevo producto 6",
-...     "codigo": "67867867",
-...     "stock": "14",
-...     "id": 4,
-...     "timeStamp": 1662671214780
-...   },
-...   {
-...     "nombre": "Champú",
-...     "precio": "123",
-...     "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
-...     "descripcion": "Un nuevo producto",
-...     "codigo": "1234",
-...     "stock": "12",
-...     "id": 1,
-...     "timeStamp": 1662671018831
-...   },
-...   {
-...     "nombre": "Jabón",
-...     "precio": "23",
-...     "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
-...     "descripcion": "Un nuevo producto 2",
-...     "codigo": "456",
-...     "stock": "12",
-...     "id": 2,
-...     "timeStamp": 1662671155583
-...   },
-...   {
-...     "nombre": "Acondicionador",
-...     "precio": "345",
-...     "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
-...     "descripcion": "Un nuevo producto 6",
-...     "codigo": "67867867",
-...     "stock": "14",
-...     "id": 4,
-...     "timeStamp": 1662671214780
-...   },
-...   {
-...     "nombre": "Champú",
-...     "precio": "123",
-...     "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
-...     "descripcion": "Un nuevo producto",
-...     "codigo": "1234",
-...     "stock": "12",
-...     "id": 1,
-...     "timeStamp": 1662671018831
-...   },
-...   {
-...     "nombre": "Jabón",
-...     "precio": "23",
-...     "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
-...     "descripcion": "Un nuevo producto 2",
-...     "codigo": "456",
-...     "stock": "12",
-...     "id": 2,
-...     "timeStamp": 1662671155583
-...   },
-...   {
-...     "nombre": "Acondicionador",
-...     "precio": "345",
-...     "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
-...     "descripcion": "Un nuevo producto 6",
-...     "codigo": "67867867",
-...     "stock": "14",
-...     "id": 4,
-...     "timeStamp": 1662671214780
-...   },
-... {
-...     "nombre": "Champú",
-...     "precio": "123",
-...     "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
-...     "descripcion": "Un nuevo producto",
-...     "codigo": "1234",
-...     "stock": "12",
-...     "id": 1,
-...     "timeStamp": 1662671018831
-...   }
-... ])
+...    {
+...      "nombre": "Champú",
+...      "precio": 120,
+...      "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
+...      "descripcion": "Un nuevo producto",
+...      "codigo": "1234",
+...      "stock": 12,
+...      "id": 1,
+...      "timeStamp": 1662671018831
+...    },
+...    {
+...      "nombre": "Jabón",
+...      "precio": 580,
+...      "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
+...      "descripcion": "Un nuevo producto 2",
+...      "codigo": "456",
+...      "stock": 12,
+...      "id": 2,
+...      "timeStamp": 1662671155583
+...    },
+...    {
+...      "nombre": "Acondicionador",
+...      "precio": 900,
+...      "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
+...      "descripcion": "Un nuevo producto 6",
+...      "codigo": "67867867",
+...      "stock": 14,
+...      "id": 4,
+...      "timeStamp": 1662671214780
+...    },
+...    {
+...      "nombre": "Champú",
+...      "precio": 1280,
+...      "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
+...      "descripcion": "Un nuevo producto",
+...      "codigo": "1234",
+...      "stock": 12,
+...      "id": 1,
+...      "timeStamp": 1662671018831
+...    },
+...    {
+...      "nombre": "Jabón",
+...      "precio": 1700,
+...      "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
+...      "descripcion": "Un nuevo producto 2",
+...      "codigo": "456",
+...      "stock": 12,
+...      "id": 2,
+...      "timeStamp": 1662671155583
+...    },
+...    {
+...      "nombre": "Acondicionador",
+...      "precio": 2300,
+...      "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
+...      "descripcion": "Un nuevo producto 6",
+...      "codigo": "67867867",
+...      "stock": 14,
+...      "id": 4,
+...      "timeStamp": 1662671214780
+...    },
+...    {
+...      "nombre": "Champú",
+...      "precio": 2860,
+...      "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
+...      "descripcion": "Un nuevo producto",
+...      "codigo": "1234",
+...      "stock": 12,
+...      "id": 1,
+...      "timeStamp": 1662671018831
+...    },
+...    {
+...      "nombre": "Jabón",
+...      "precio": 3350,
+...      "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
+...      "descripcion": "Un nuevo producto 2",
+...      "codigo": "456",
+...      "stock": 12,
+...      "id": 2,
+...      "timeStamp": 1662671155583
+...    },
+...    {
+...      "nombre": "Acondicionador",
+...      "precio": 4320,
+...      "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
+...      "descripcion": "Un nuevo producto 6",
+...      "codigo": "67867867",
+...      "stock": 14,
+...      "id": 4,
+...      "timeStamp": 1662671214780
+...    },
+...  {
+...      "nombre": "Champú",
+...      "precio": 4990,
+...      "urlImagen": "https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png",
+...      "descripcion": "Un nuevo producto",
+...      "codigo": "1234",
+...      "stock": 12,
+...      "id": 1,
+...      "timeStamp": 1662671018831
+...    }
+...  ])
 {
   acknowledged: true,
   insertedIds: {
-    '0': ObjectId("63338b7732f6d58924650858"),
-    '1': ObjectId("63338b7732f6d58924650859"),
-    '2': ObjectId("63338b7732f6d5892465085a"),
-    '3': ObjectId("63338b7732f6d5892465085b"),
-    '4': ObjectId("63338b7732f6d5892465085c"),
-    '5': ObjectId("63338b7732f6d5892465085d"),
-    '6': ObjectId("63338b7732f6d5892465085e"),
-    '7': ObjectId("63338b7732f6d5892465085f"),
-    '8': ObjectId("63338b7732f6d58924650860"),
-    '9': ObjectId("63338b7732f6d58924650861")
+    '0': ObjectId("63359d62ec28097afae0d8a0"),
+    '1': ObjectId("63359d62ec28097afae0d8a1"),
+    '2': ObjectId("63359d62ec28097afae0d8a2"),
+    '3': ObjectId("63359d62ec28097afae0d8a3"),
+    '4': ObjectId("63359d62ec28097afae0d8a4"),
+    '5': ObjectId("63359d62ec28097afae0d8a5"),
+    '6': ObjectId("63359d62ec28097afae0d8a6"),
+    '7': ObjectId("63359d62ec28097afae0d8a7"),
+    '8': ObjectId("63359d62ec28097afae0d8a8"),
+    '9': ObjectId("63359d62ec28097afae0d8a9")
   }
 }
+eccomerce>
+
 eccomerce> db.mensajes.insertMany([
 ...   {
 ...     "email": "marcos_arguello2003@yahoo.com.ar",
@@ -210,4 +216,567 @@ eccomerce> db.mensajes.insertMany([
     '9': ObjectId("63338ccb32f6d5892465086b")
   }
 }
+
+eccomerce>
+
+//*3) Listar todos los documentos en cada colección.
+
+eccomerce> db.productos.find()
+[
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a0"),
+    nombre: 'Champú',
+    precio: 120,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto',
+    codigo: '1234',
+    stock: 12,
+    id: 1,
+    timeStamp: 1662671018831
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a1"),
+    nombre: 'Jabón',
+    precio: 580,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto 2',
+    codigo: '456',
+    stock: 12,
+    id: 2,
+    timeStamp: 1662671155583
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a2"),
+    nombre: 'Acondicionador',
+    precio: 900,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto 6',
+    codigo: '67867867',
+    stock: 14,
+    id: 4,
+    timeStamp: 1662671214780
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a3"),
+    nombre: 'Champú',
+    precio: 1280,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto',
+    codigo: '1234',
+    stock: 12,
+    id: 1,
+    timeStamp: 1662671018831
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a4"),
+    nombre: 'Jabón',
+    precio: 1700,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto 2',
+    codigo: '456',
+    stock: 12,
+    id: 2,
+    timeStamp: 1662671155583
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a5"),
+    nombre: 'Acondicionador',
+    precio: 2300,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto 6',
+    codigo: '67867867',
+    stock: 14,
+    id: 4,
+    timeStamp: 1662671214780
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a6"),
+    nombre: 'Champú',
+    precio: 2860,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto',
+    codigo: '1234',
+    stock: 12,
+    id: 1,
+    timeStamp: 1662671018831
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a7"),
+    nombre: 'Jabón',
+    precio: 3350,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto 2',
+    codigo: '456',
+    stock: 12,
+    id: 2,
+    timeStamp: 1662671155583
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a8"),
+    nombre: 'Acondicionador',
+    precio: 4320,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto 6',
+    codigo: '67867867',
+    stock: 14,
+    id: 4,
+    timeStamp: 1662671214780
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a9"),
+    nombre: 'Champú',
+    precio: 4990,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto',
+    codigo: '1234',
+    stock: 12,
+    id: 1,
+    timeStamp: 1662671018831
+  }
+]
+eccomerce>
+
+eccomerce> db.mensajes.find()
+[
+  {
+    _id: ObjectId("63338ccb32f6d58924650862"),
+    email: 'marcos_arguello2003@yahoo.com.ar',
+    fecha: '1/9/2022 19:6:38',
+    mensaje: 'Hola1'
+  },
+  {
+    _id: ObjectId("63338ccb32f6d58924650863"),
+    email: 'marcos_arguello2003@yahoo.com.ar',
+    fecha: '1/9/2022 19:6:50',
+    mensaje: 'Hola2'
+  },
+  {
+    _id: ObjectId("63338ccb32f6d58924650864"),
+    email: 'marcos_arguello2003@yahoo.com.ar',
+    fecha: '1/9/2022 19:6:38',
+    mensaje: 'Hola3'
+  },
+  {
+    _id: ObjectId("63338ccb32f6d58924650865"),
+    email: 'marcos_arguello2003@yahoo.com.ar',
+    fecha: '1/9/2022 19:6:50',
+    mensaje: 'Hola4'
+  },
+  {
+    _id: ObjectId("63338ccb32f6d58924650866"),
+    email: 'marcos_arguello2003@yahoo.com.ar',
+    fecha: '1/9/2022 19:6:38',
+    mensaje: 'Hola5'
+  },
+  {
+    _id: ObjectId("63338ccb32f6d58924650867"),
+    email: 'marcos_arguello2003@yahoo.com.ar',
+    fecha: '1/9/2022 19:6:50',
+    mensaje: 'Hola6'
+  },
+  {
+    _id: ObjectId("63338ccb32f6d58924650868"),
+    email: 'marcos_arguello2003@yahoo.com.ar',
+    fecha: '1/9/2022 19:6:38',
+    mensaje: 'Hola7'
+  },
+  {
+    _id: ObjectId("63338ccb32f6d58924650869"),
+    email: 'marcos_arguello2003@yahoo.com.ar',
+    fecha: '1/9/2022 19:6:50',
+    mensaje: 'Hola8'
+  },
+  {
+    _id: ObjectId("63338ccb32f6d5892465086a"),
+    email: 'marcos_arguello2003@yahoo.com.ar',
+    fecha: '1/9/2022 19:6:38',
+    mensaje: 'Hola9'
+  },
+  {
+    _id: ObjectId("63338ccb32f6d5892465086b"),
+    email: 'marcos_arguello2003@yahoo.com.ar',
+    fecha: '1/9/2022 19:6:50',
+    mensaje: 'Hola10'
+  }
+]
+eccomerce>
+
+//*4) Mostrar la cantidad de documentos almacenados en cada una de ellas.
+
+eccomerce> db.productos.estimatedDocumentCount()
+10
+eccomerce> db.mensajes.estimatedDocumentCount()
+10
+eccomerce>
+
+//*5) Realizar un CRUD sobre la colección de productos:
+//*a) Agregar un producto más en la colección de productos
+
+eccomerce> db.productos.insertOne([
+...    {
+...      "nombre": "Cepillo dientes",
+...      "precio": 150,
+...      "urlImagen": " https://www.clinicapfaff.es/wp-content/uploads/2018/02/mejor-cepillo-de-dientes--400x600.jpeg",
+...      "descripcion": "Un nuevo producto",
+...      "codigo": "12345",
+...      "stock": 125,
+...      "id": 11,
+...      "timeStamp": 1662671018831
+...    }])
+{
+  acknowledged: true,
+  insertedId: ObjectId("63359de7ec28097afae0d8aa")
+}
+eccomerce>
+
+//*b) Realizar una consulta por nombre de producto específico:
+//*i) Listar los productos con precio menor a 1000 pesos.
+
+eccomerce> db.productos.find({"precio": {$lt: 1000}})
+[
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a0"),
+    nombre: 'Champú',
+    precio: 120,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto',
+    codigo: '1234',
+    stock: 12,
+    id: 1,
+    timeStamp: 1662671018831
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a1"),
+    nombre: 'Jabón',
+    precio: 580,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto 2',
+    codigo: '456',
+    stock: 12,
+    id: 2,
+    timeStamp: 1662671155583
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a2"),
+    nombre: 'Acondicionador',
+    precio: 900,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto 6',
+    codigo: '67867867',
+    stock: 14,
+    id: 4,
+    timeStamp: 1662671214780
+  }
+]
+eccomerce>
+
+//*ii) Listar los productos con precio entre los 1000 a 3000 pesos.
+
+eccomerce> db.productos.find({precio: { $gt: 1000, $lt: 3000 }})
+[
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a3"),
+    nombre: 'Champú',
+    precio: 1280,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto',
+    codigo: '1234',
+    stock: 12,
+    id: 1,
+    timeStamp: 1662671018831
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a4"),
+    nombre: 'Jabón',
+    precio: 1700,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto 2',
+    codigo: '456',
+    stock: 12,
+    id: 2,
+    timeStamp: 1662671155583
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a5"),
+    nombre: 'Acondicionador',
+    precio: 2300,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto 6',
+    codigo: '67867867',
+    stock: 14,
+    id: 4,
+    timeStamp: 1662671214780
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a6"),
+    nombre: 'Champú',
+    precio: 2860,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto',
+    codigo: '1234',
+    stock: 12,
+    id: 1,
+    timeStamp: 1662671018831
+  }
+]
+eccomerce>
+
+//*iii) Listar los productos con precio mayor a 3000 pesos.
+
+eccomerce> db.productos.find({precio: { $gt: 3000 }})
+[
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a7"),
+    nombre: 'Jabón',
+    precio: 3350,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto 2',
+    codigo: '456',
+    stock: 12,
+    id: 2,
+    timeStamp: 1662671155583
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a8"),
+    nombre: 'Acondicionador',
+    precio: 4320,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto 6',
+    codigo: '67867867',
+    stock: 14,
+    id: 4,
+    timeStamp: 1662671214780
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a9"),
+    nombre: 'Champú',
+    precio: 4990,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto',
+    codigo: '1234',
+    stock: 12,
+    id: 1,
+    timeStamp: 1662671018831
+  }
+]
+eccomerce>
+
+//*iv) Realizar una consulta que traiga sólo el nombre del tercer producto más barato.
+
+eccomerce> db.productos.find({},{_id:0, nombre: 1}).skip(2).limit(1).sort({precio: 1})
+[ { nombre: 'Jabón' } ]
+
+eccomerce>
+
+//*c) Hacer una actualización sobre todos los productos, agregando el campo stock a todos ellos con un valor de 100.
+
+eccomerce> db.productos.updateMany({}, {$set: {"stock": 100}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 11,
+  modifiedCount: 11,
+  upsertedCount: 0
+}
+eccomerce>
+
+//*d) Cambiar el stock a cero de los productos con precios mayores a 4000 pesos.
+
+eccomerce> db.productos.updateMany({ precio: {$gt: 4000 }},{$set: {"stock": 0}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+eccomerce>
+
+//*e) Borrar los productos con precio menor a 1000 pesos
+
+eccomerce> db.productos.deleteMany({precio: { $lt: 1000 }})
+{ acknowledged: true, deletedCount: 3 }
+eccomerce>
+
+//*6) Crear un usuario 'pepe' clave: 'asd456' que sólo pueda leer la base de datos ecommerce.
+
+eccomerce> use admin
+switched to db admin
+admin> db.createUser({user: "pepe", pwd: "asd456", roles: [{role: "read", db: "ecommerce"}]})
+{ ok: 1 }
+admin>
+
+//*Verificar que pepe no pueda cambiar la información
+
+C:\Users\inta>mongosh.exe -u pepe -p asd456
+Current Mongosh Log ID: 6335bf5368a70c2b9194259d
+Connecting to:          mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.6.0
+Using MongoDB:          6.0.1
+Using Mongosh:          1.6.0
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+test> use eccomerce
+switched to db eccomerce
+eccomerce> db.productos.find()
+[
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a3"),
+    nombre: 'Champú',
+    precio: 1280,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto',
+    codigo: '1234',
+    stock: 100,
+    id: 1,
+    timeStamp: 1662671018831
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a4"),
+    nombre: 'Jabón',
+    precio: 1700,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto 2',
+    codigo: '456',
+    stock: 100,
+    id: 2,
+    timeStamp: 1662671155583
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a5"),
+    nombre: 'Acondicionador',
+    precio: 2300,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto 6',
+    codigo: '67867867',
+    stock: 100,
+    id: 4,
+    timeStamp: 1662671214780
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a6"),
+    nombre: 'Champú',
+    precio: 2860,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto',
+    codigo: '1234',
+    stock: 100,
+    id: 1,
+    timeStamp: 1662671018831
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a7"),
+    nombre: 'Jabón',
+    precio: 3350,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto 2',
+    codigo: '456',
+    stock: 100,
+    id: 2,
+    timeStamp: 1662671155583
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a8"),
+    nombre: 'Acondicionador',
+    precio: 4320,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto 6',
+    codigo: '67867867',
+    stock: 0,
+    id: 4,
+    timeStamp: 1662671214780
+  },
+  {
+    _id: ObjectId("63359d62ec28097afae0d8a9"),
+    nombre: 'Champú',
+    precio: 4990,
+    urlImagen: 'https://www.sedal.com.ar/content/dam/unilever/sunsilk/argentina/pack_shot/7791293030661-1966781-png.png',
+    descripcion: 'Un nuevo producto',
+    codigo: '1234',
+    stock: 0,
+    id: 1,
+    timeStamp: 1662671018831
+  },
+  {
+    '0': {
+      nombre: 'Cepillo dientes',
+      precio: 150,
+      urlImagen: ' https://www.clinicapfaff.es/wp-content/uploads/2018/02/mejor-cepillo-de-dientes--400x600.jpeg',
+      descripcion: 'Un nuevo producto',
+      codigo: '12345',
+      stock: 125,
+      id: 11,
+      timeStamp: 1662671018831
+    },
+    _id: ObjectId("63359de7ec28097afae0d8aa"),
+    stock: 100
+  },
+  {
+    '0': {
+      nombre: 'Cepillo dientes',
+      precio: 150,
+      urlImagen: ' https://www.clinicapfaff.es/wp-content/uploads/2018/02/mejor-cepillo-de-dientes--400x600.jpeg',
+      descripcion: 'Un nuevo producto',
+      codigo: '12345',
+      stock: 125,
+      id: 11,
+      timeStamp: 1662671018831
+    },
+    _id: ObjectId("6335a91d7337d66003e6617a")
+  },
+  {
+    '0': {
+      nombre: 'Cepillo dientes',
+      precio: 150,
+      urlImagen: ' https://www.clinicapfaff.es/wp-content/uploads/2018/02/mejor-cepillo-de-dientes--400x600.jpeg',
+      descripcion: 'Un nuevo producto',
+      codigo: '12345',
+      stock: 125,
+      id: 11,
+      timeStamp: 1662671018831
+    },
+    _id: ObjectId("6335aff7822f6c03d1384130")
+  },
+  {
+    '0': {
+      nombre: 'Cepillo dientes',
+      precio: 150,
+      urlImagen: ' https://www.clinicapfaff.es/wp-content/uploads/2018/02/mejor-cepillo-de-dientes--400x600.jpeg',
+      descripcion: 'Un nuevo producto',
+      codigo: '12345',
+      stock: 125,
+      id: 11,
+      timeStamp: 1662671018831
+    },
+    _id: ObjectId("6335b2cff29e6c280300ae8c")
+  },
+  {
+    '0': {
+      nombre: 'Cepillo dientes',
+      precio: 150,
+      urlImagen: ' https://www.clinicapfaff.es/wp-content/uploads/2018/02/mejor-cepillo-de-dientes--400x600.jpeg',
+      descripcion: 'Un nuevo producto',
+      codigo: '12345',
+      stock: 125,
+      id: 11,
+      timeStamp: 1662671018831
+    },
+    _id: ObjectId("6335bbab276846da6bd99fba")
+  },
+  {
+    '0': {
+      nombre: 'Cepillo dientes',
+      precio: 150,
+      urlImagen: ' https://www.clinicapfaff.es/wp-content/uploads/2018/02/mejor-cepillo-de-dientes--400x600.jpeg',
+      descripcion: 'Un nuevo producto',
+      codigo: '12345',
+      stock: 125,
+      id: 11,
+      timeStamp: 1662671018831
+    },
+    _id: ObjectId("6335bd0f3ab780df62dda452")
+  }
+]
+eccomerce> db.productos.insertOne([ { "nombre": "Cepillo dientes", "precio": 150, "urlImagen": " https://www.clinicapfaff.es/wp-content/uploads/2018/02/mejor-cepillo-de-dientes--400x600.jpeg", "descripcion": "Un nuevo producto", "codigo": "12345", "stock": 125, "id": 11, "timeStamp": 1662671018831 }])
+MongoServerError: not authorized on eccomerce to execute command { insert: "productos", documents: [ { 0: { nombre: "Cepillo dientes", precio: 150, urlImagen: " https://www.clinicapfaff.es/wp-content/uploads/2018/02/mejor-cepillo-de-dientes--400x600.jpeg", descripcion: "Un nuevo producto", codigo: "12345", stock: 125, id: 11, timeStamp: 1662671018831.0 }, _id: ObjectId('6335bf638a71b70271f4ed58') } ], ordered: true, lsid: { id: UUID("6b8b9fbb-d712-46ff-a6a4-4c1d8d886fec") }, $db: "eccomerce" }
 eccomerce>
